@@ -15,7 +15,6 @@ delete hashmap["978-1-60309-444-3"];
 let deleteKey: string = "";
 let obj = Object.getOwnPropertyNames(hashmap).forEach((key) => setDeleteKey(key))
 
-
 delete hashmap[deleteKey];
 
 function setDeleteKey(key) {
