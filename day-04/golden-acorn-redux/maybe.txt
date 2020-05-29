@@ -1,0 +1,29 @@
+//ActionCreators and a possible reducer fo implementing the project with redux//
+
+function createAcornActionCreator() {
+  return {type: INCREMENT};
+}
+
+function eatAcornActionCreator() {
+  return {type: DECREMENT};
+}
+
+const initState = {
+  counter: 0
+}
+
+function actionHandler(state = initState, action) {
+  const previousCounter = state.counter;
+  switch (action.type) {
+    case 'INCREMENT':
+      return Object.assign({}, state, {
+        counter: previousCounter + 1
+      })
+    case 'DECREMENT':
+    return Object.assign({}, state, {
+      counter: previousCounter - 1
+    })
+    default:
+        return state
+  }
+}
